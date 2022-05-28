@@ -1,8 +1,10 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import Routing from './routes';
 
 function App() {
   return (
-  <h1>Tech Travel</h1>
+  <BrowserRouter><Routing/></BrowserRouter>
   );
 }
 
