@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 function App() {
   return (
-   <h1> Tech Travel</h1>
+  <h1>Tech Travel</h1>
   );
 }
 
