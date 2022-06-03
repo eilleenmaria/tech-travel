@@ -1,5 +1,12 @@
 import React from 'react';
-function Home () {
-    return <h1>Home</h1>;
+import { Title, Subtitle } from './style';
+
+function Home() {
+  return (
+    <>
+      <Title>Home</Title>; <Subtitle>Esta es mi casa</Subtitle>
+      <a href="/cart">Cart</a>
+    </>
+  );
 }
 export default Home;
