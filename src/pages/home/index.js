@@ -1,12 +1,24 @@
 import React from 'react';
-import { Title, Subtitle } from './style';
+import { MdAddShoppingCart } from 'react-icons/md';
+import { Container, List, Unit } from './style';
 
 function Home() {
   return (
-    <>
-      <Title>Home</Title>; <Subtitle>Esta es mi casa</Subtitle>
-      <a href="/cart">Cart</a>
-    </>
+    <Container>
+      <List>
+        <Unit>
+          <img src="" alt="Travel" />
+          <p>Israel</p>
+          <strong>240.00</strong>
+
+          <button type="button">
+            <div>
+              <MdAddShoppingCart size={16} color="#fff" />
+            </div>
+          </button>
+        </Unit>
+      </List>
+    </Container>
   );
 }
 export default Home;

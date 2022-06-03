@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Title = styled.p`
-  font-size: 70px;
-`;
-export const Subtitle = styled.p`
-  font-size: 10px;
-  color: #456456;
-`;
+export const Container = styled.main``;
+export const List = styled.ul``;
+export const Unit = styled.li``;
