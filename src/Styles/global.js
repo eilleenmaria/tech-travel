@@ -14,7 +14,7 @@ html,body, #root{
     height:100%;
 }
 body{
-    background-color: #f6f7fb;
+    background-color: #000;
     -webkit-font-smoothing: antialiased;
 }
 body, input, button {
