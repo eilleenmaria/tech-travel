@@ -15,9 +15,15 @@ function Home() {
     }
     getTravelList();
   }, []);
+
   function handleAddToCart(travel) {
     const copyCart = [...state.cart];
-    copyCart.push(travel);
+    const TravelIndex = copyCart.findIndex((el) => el.id === travel.id);
+    if (TravelIndex >= 0) {
+      copyCart[TravelIndex].quantity += 1;
+    } else {
+      copyCart.push({ ...travel, quantity: 1 });
+    }
 
     setState({
       cart: copyCart,

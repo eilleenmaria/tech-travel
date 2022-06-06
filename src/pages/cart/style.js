@@ -19,6 +19,7 @@ export const ContainerList = styled.ul`
     height: 100px;
   }
 `;
+
 export const TravelItem = styled.li`
   width: 100%;
   display: flex;
@@ -63,5 +64,19 @@ export const Subtotal = styled.div`
 
   p {
     margin-right: 10px;
+  }
+`;
+export const TotalTravel = styled.div`
+  display: flex;
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 10px;
+  align-items: right;
+  justify-content: right;
+
+  p {
+    margin-right: 200px;
+    margin-left: 20px;
+    margin-bottom: 10px;
   }
 `;
