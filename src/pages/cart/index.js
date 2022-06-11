@@ -14,6 +14,10 @@ import {
 
 function Cart() {
   const { state, setState } = useContext(CartContext);
+  const totalTravel = state.cart.reduce(
+    (previousValue, travel) => previousValue + travel.quantity * travel.price,
+    0,
+  );
   return (
     <Container>
       <ContainerList>
@@ -26,7 +30,7 @@ function Cart() {
             </Info>
             <Quantity readOnly type="number" value={el.quantity} />
             <Subtotal>
-              <p>{el.price * el.quantity}</p>
+              <p id="subtotal">{el.price * el.quantity}</p>
               <button type="button">
                 <MdDelete size={24} color="#0676d9" />
               </button>
@@ -35,7 +39,7 @@ function Cart() {
         ))}
         <TotalTravel>
           <p>Total</p>
-          <strong>340</strong>
+          <strong>{totalTravel}</strong>
         </TotalTravel>
       </ContainerList>
     </Container>
