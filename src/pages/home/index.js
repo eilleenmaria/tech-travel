@@ -18,7 +18,9 @@ function Home() {
 
   function handleAddToCart(travel) {
     const copyCart = [...state.cart];
+    console.log(copyCart);
     const TravelIndex = copyCart.findIndex((el) => el.id === travel.id);
+    console.log(travel.id);
     if (TravelIndex >= 0) {
       copyCart[TravelIndex].quantity += 1;
     } else {

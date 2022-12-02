@@ -18,6 +18,17 @@ function Cart() {
     (previousValue, travel) => previousValue + travel.quantity * travel.price,
     0,
   );
+  function deleteTravel(travel) {
+    const copyCart = [...state.cart];
+    console.log(copyCart);
+    const travelId = copyCart.findIndex((el) => el.id === travel.id);
+    if (!travelId) {
+      copyCart.splice(travelId, 1);
+    }
+    setState({
+      cart: copyCart,
+    });
+  }
   return (
     <Container>
       <ContainerList>
@@ -31,7 +42,7 @@ function Cart() {
             <Quantity readOnly type="number" value={el.quantity} />
             <Subtotal>
               <p id="subtotal">{el.price * el.quantity}</p>
-              <button type="button">
+              <button type="button" onClick={() => deleteTravel(el)}>
                 <MdDelete size={24} color="#0676d9" />
               </button>
             </Subtotal>
